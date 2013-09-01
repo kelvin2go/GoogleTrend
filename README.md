@@ -5,7 +5,7 @@ Google Trend API codeigniter php
 
 
 This is a basic libary enable you to save google trends keywords as a JSON.
-This library is used with the curl which I used a Curl library ( https://github.com/philsturgeon/codeigniter-curl ) .
+This library is used with the curl.
 
 package       CodeIgniter
 subpackage    Libraries
@@ -19,7 +19,7 @@ Get the google trend keywod and save as a JSON
 
 Requirements
 ============
-1. PHP 5.1+ with curl
+1. PHP 5.1+ with curl which I used a Curl library ( https://github.com/philsturgeon/codeigniter-curl ) .
 2. CodeIgniter 
 
 Example
