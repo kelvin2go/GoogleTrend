@@ -67,6 +67,7 @@ http://www.google.com/trends/fetchComponent
   
 http://www.google.com/trends/fetchComponent?hl=en-US&cat=0-18-78&geo=US&date=today+1-m&gprop=froogle&cmpt=q&content=1&cid=TOP_QUERIES_0_0&export=3  
 
+You will have chance reach your limit for curling google trends.
 
 If you have any questions or found any bugs, please message or pull request me. 
 
