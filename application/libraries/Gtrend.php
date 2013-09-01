@@ -4,7 +4,7 @@
  * Google Trend API - library
  *
  * This is a basic libary enable you to get google trends keywords as a JSON.
- * This library is used with the curl which I used a Curl library ( ) .
+ * This library is used with the curl which I used a Curl library ( https://github.com/philsturgeon/codeigniter-curl ) .
  *
  * @package       CodeIgniter
  * @subpackage    Libraries
@@ -37,7 +37,7 @@ class Gtrend
      */
     function get_keyword ( $category = "0-18-78", $type ='TOP' ) {
         $result = array();
-        $fileName = date('Ymd', time()).'_'.$category.'.json';
+        $fileName = date('Ymd', time())."_{$type}_{$category}.json";
         $local_path = $this->data_base_path.$fileName;
 
         if ( file_exists($local_path) ) {
@@ -59,7 +59,7 @@ class Gtrend
     function create_trend_keyword( $category = "0-18-78", $type = "TOP", $local_path = NULL ){
         $result = array();
         if ( empty( $local_path )){
-            $fileName = date('Ymd', time())."_{$type}_{$category}_.json";
+            $fileName = date('Ymd', time())."_{$type}_{$category}.json";
             $local_path = $this->data_base_path.$fileName;
         }
         $base_request_url = 'http://www.google.com/trends/fetchComponent?';
@@ -70,6 +70,7 @@ class Gtrend
         if ( !empty( $response) ) {
             $response = substr( $response, 62, -2);
             $response_json = json_decode($response,TRUE);
+            debug($response,$request);
             foreach ($response_json['table']['rows'] as $keyword){
                 $result[] = $keyword['c'][0]['v'];
             }
