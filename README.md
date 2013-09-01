@@ -61,10 +61,12 @@ Download
 https://github.com/kelvin2go/GoogleTrend/
 
 Remarks:
+--------
 The data is from  
 http://www.google.com/trends/fetchComponent  
+  
 http://www.google.com/trends/fetchComponent?hl=en-US&cat=0-18-78&geo=US&date=today+1-m&gprop=froogle&cmpt=q&content=1&cid=TOP_QUERIES_0_0&export=3  
 
 
-If you have any question
+If you have any questions or found any bugs, please message or pull request me. 
 
