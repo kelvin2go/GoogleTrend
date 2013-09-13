@@ -60,6 +60,11 @@ Download
 ========
 https://github.com/kelvin2go/GoogleTrend/
 
+
+Example of usage on website
+===========================
+http://zonmine.com
+
 Remarks:
 --------
 The data is from  
