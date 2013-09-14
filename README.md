@@ -7,16 +7,11 @@ Google Trend API codeigniter php
 This is a basic libary enable you to read/save google trends keywords as a JSON once a day. If JSON appear, read it. If not, curl the keyword and save as a JSON for next request. 
 This library is used with the curl.
 
-package       CodeIgniter / PHP
-subpackage    Libraries
-author        kelvin Kwong Ho 
-version       0.1
-date          9/1/2013
-
-Requirements
-============
-1. PHP 5.1+ with curl which I used a Curl library ( https://github.com/philsturgeon/codeigniter-curl ) .
-2. CodeIgniter 
+Package       CodeIgniter / PHP      
+Subpackage    Libraries      
+Author        kelvin Kwong Ho      
+Version       0.1      
+Date          9/1/2013      
 
 What to solve
 =============
@@ -26,6 +21,12 @@ Then it uses the Gtrend keyword to search products in Amazon. The content will a
 Features
 ========
 Get the google trend keywod and save as a JSON
+
+Requirements
+============
+1. PHP 5.1+ with curl which I used a Curl library ( https://github.com/philsturgeon/codeigniter-curl ) .
+2. CodeIgniter 
+
 Example
 =======
 default call
@@ -41,23 +42,27 @@ Instruction
 1. Put the Gtrend.php under codeigniter "application/libraries" and make sure you have the Curl.php or $this->curl funtion
 2. Loading the libraries by either one of the following way:  
 a. Autoload 'config/Autoload.php' add a param in  $autoload['libraries'] = array('Curl', 'Gtrend');  
-b. ```function __construct() {  
+b. <pre>function __construct() {  
 	parent::__construct();  
 	$this->load->library('Gtrend');  
-	}```  
-c. ```$this->load->library('Gtrend');  ```
+	}</pre>  
+c. <pre>$this->load->library('Gtrend'); </pre>
 	
 3. setup the JSON file data path :
 $config['data_base_path'] = 'www/data/';
     
 4. Call the library as follow :  
-a. $result = $this->create_trend_keyword( ); //default is cat "0-18-78" => Shopping > Consumer Electronics, type TOP  
-b. $result = $this->create_trend_keyword( $category, $type );
+<pre>
+ $result = $this->create_trend_keyword( ); //default is cat "0-18-78" => Shopping > Consumer Electronics, type TOP  
+ $result = $this->create_trend_keyword( $category, $type );
+</pre>
 
 5. The keyword JSON is now stored as {data_base_path}/{Ymd_type_cat_}.json   
 e.g. 20130901_TOP_0-18-78_.json  
-Content : ["ipod","tv","camera","xbox","sony","speakers","nikon","xbox 360","headphones","ipod touch"]  
-
+Content : 
+<pre>
+["ipod","tv","camera","xbox","sony","speakers","nikon","xbox 360","headphones","ipod touch"]  
+</pre>
 
 
 Download
@@ -76,7 +81,7 @@ http://www.google.com/trends/fetchComponent
   
 http://www.google.com/trends/fetchComponent?hl=en-US&cat=0-18-78&geo=US&date=today+1-m&gprop=froogle&cmpt=q&content=1&cid=TOP_QUERIES_0_0&export=3  
 
-You will have chance reach your limit for curling google trends.
+You will have chance to reach your limit for curling google trends.
 
 If you have any questions or found any bugs, please message or pull request me. 
 
