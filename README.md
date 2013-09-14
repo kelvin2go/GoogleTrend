@@ -4,14 +4,19 @@ GoogleTrend
 Google Trend API codeigniter php
 
 
-This is a basic libary enable you to save google trends keywords as a JSON.
+This is a basic libary enable you to read/save google trends keywords as a JSON once a day. If JSON appear, read it. If not, curl the keyword and save as a JSON for next request. 
 This library is used with the curl.
 
-package       CodeIgniter
+package       CodeIgniter / PHP
 subpackage    Libraries
 author        kelvin Kwong Ho 
 version       0.1
 date          9/1/2013
+
+What to solve
+=============
+In some moments, the site I needs a content or keyword for dynamic run or request. Like the site of http://zonmine.com, call google trend once a day to gather the hot keyword in shopping (for 30 days and 7 days ).
+Then it uses the Gtrend keyword to search products in Amazon. The content will appear updating daily and easily go up to 2000-5000 products in few days.
 
 Features
 ========
@@ -26,11 +31,11 @@ Example
 =======
 default call
 ------------
+<pre>
 $response = $this->create_trend_keyword( );
 
-$response :
-["ipod","tv","camera","xbox","sony","speakers","nikon","xbox 360","headphones","ipod touch"]
-
+//return json ["ipod","tv","camera","xbox","sony","speakers","nikon","xbox 360","headphones","ipod touch"]
+</pre>
 
 Instruction
 ===========
