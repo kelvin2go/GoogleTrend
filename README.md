@@ -13,20 +13,19 @@ author        kelvin Kwong Ho
 version       0.1
 date          9/1/2013
 
-What to solve
-=============
-In some moments, the site I needs a content or keyword for dynamic run or request. Like the site of http://zonmine.com, call google trend once a day to gather the hot keyword in shopping (for 30 days and 7 days ).
-Then it uses the Gtrend keyword to search products in Amazon. The content will appear updating daily and easily go up to 2000-5000 products in few days.
-
-Features
-========
-Get the google trend keywod and save as a JSON
-
 Requirements
 ============
 1. PHP 5.1+ with curl which I used a Curl library ( https://github.com/philsturgeon/codeigniter-curl ) .
 2. CodeIgniter 
 
+What to solve
+=============
+For some moments, my site needs a content or keyword for dynamic run or request. Like the site of http://zonmine.com, call google trend once a day to gather the hot keyword in shopping (for 30 days and 7 days ).
+Then it uses the Gtrend keyword to search products in Amazon. The content will appear updating daily and easily go up to 2000-5000 products in few days.
+
+Features
+========
+Get the google trend keywod and save as a JSON
 Example
 =======
 default call
